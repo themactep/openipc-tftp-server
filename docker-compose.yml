@@ -1,0 +1,9 @@
+version: '3.9'
+services:
+  tftpd-hpa:
+    build: .
+    container_name: tftp
+    network_mode: 'host'
+    restart: unless-stopped
+    volumes:
+      - ./tftp:/srv/tftp
